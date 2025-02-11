@@ -21,22 +21,26 @@ body {
 
 /* Navigation */
 nav {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 9999;
     top: 0;
     left: 0;
+    height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px; /* Fixed height for nav */
+    height: 100%;
 }
 
 .logo {
@@ -73,6 +77,7 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 60px;  /* Add margin equal to nav height */
 }
 
 .hero-content h1 {
@@ -115,11 +120,12 @@ section {
 
 /* Adjust content padding to prevent overlap with fixed nav */
 section:first-of-type {
-    padding-top: calc(5rem + 60px); /* Add nav height to existing padding */
+    padding-top: 5rem;
 }
 
 .legal-container {
-    margin-top: 80px; /* Adjust for fixed nav */
+    margin-top: 60px;  /* Adjust for fixed nav */
+    padding-top: 40px; /* Add some breathing room */
 }
 
 h2 {
