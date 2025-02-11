@@ -25,6 +25,8 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    top: 0;
+    left: 0;
 }
 
 .nav-container {
@@ -34,6 +36,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 60px; /* Fixed height for nav */
 }
 
 .logo {
@@ -108,6 +111,15 @@ nav {
 /* Sections */
 section {
     padding: 5rem 2rem;
+}
+
+/* Adjust content padding to prevent overlap with fixed nav */
+section:first-of-type {
+    padding-top: calc(5rem + 60px); /* Add nav height to existing padding */
+}
+
+.legal-container {
+    margin-top: 80px; /* Adjust for fixed nav */
 }
 
 h2 {
